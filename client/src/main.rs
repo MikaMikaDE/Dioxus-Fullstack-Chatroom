@@ -7,7 +7,7 @@ mod outbound; use outbound::{
 mod format  ;
 
     static MAIN_CSS       :Asset = asset!("/assets/style.css");
-    const  SERVER         :&str  ="";// "https://a1b2-c3d4.ngrok-free.app";//"http://localhost:3001";
+    const  SERVER         :&str  = "http://localhost:3001"; //change to "" for ngrok
     const  CHATROOM_FOLDER:&str  = "messages";
     const  CHATROOM_FILE  :&str  = "chats"   ;
 pub const  API_TOKEN      :&str  = "token"   ;
