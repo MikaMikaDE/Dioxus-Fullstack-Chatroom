@@ -1,0 +1,42 @@
+
+body {
+  background-color: #333;
+  color: wheat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+  --color-3 : #8f7345;
+  --color-5 : #4c3d25;
+  --color-7 : #453024;
+  --color-bg: #1f2542;
+  --margin-offset:3;
+  --size-margin  : 1px; --total-size-margin :calc(var(--size-margin )*var(--margin-offset));
+  --size-border  : 1px; --total-size-border :calc(var(--size-border )*2);
+  --size-padding : 3px; --total-size-padding:calc(var(--size-padding)*2);
+  --single-box-shadow:inset 0 1px 0 0     var(--color-5), 
+                      inset 0 1px 0 1px black, 
+                      inset 0 0   0 1px black;
+ 
+  display   : block;
+  padding   : var(--total-size-padding);
+  margin    : var(--total-size-margin );
+  width     : var(--size);
+  box-sizing: border-box ;
+ 
+  background-color:var(--color-bg); 
+  outline      : var(--size-border) solid black;
+  border-top   : var(--size-border) solid var(--color-3); 
+  border-inline: var(--size-border) solid var(--color-5);
+  border-bottom: var(--size-border) solid var(--color-7);
+  box-shadow   : var(--single-box-shadow);
+  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size  : 1em;
+  text-align : center;
+  color      : white;
+
+  &button, &input{cursor: pointer;}
+  &button:hover, &.highlighted { --highlight-color: red; box-shadow: var(--single-box-shadow), 0 0 0 2px red; }
+}
+
